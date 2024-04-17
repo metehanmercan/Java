@@ -41,5 +41,7 @@ public class Array {
         List lists=new ArrayList();
         lists=Arrays.asList(ciyts);
         System.out.println(lists); // cıktısı bu -> [adana, ankara, mersin]
+
+
     }
 }
