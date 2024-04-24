@@ -1,7 +1,6 @@
 package org.example;
 
 import javax.swing.*;
-import java.util.NoSuchElementException;
 import java.util.Random;
 
 public class JOptionPaneKullanimi {
@@ -14,17 +13,17 @@ public class JOptionPaneKullanimi {
 
         // bilgi mesajı gösterme
         // sondaki paramete ikon resmidir
-//        JOptionPane.showMessageDialog(null,"bilgilendirme mesajı","başlıkkk",JOptionPane.OK_OPTION);
+        // JOptionPane.showMessageDialog(null,"bilgilendirme mesajı","başlıkkk",JOptionPane.OK_OPTION);
 
         int i = 1;
         Random r = new Random();
-        int sayi1 = r.nextInt(10);
+        int sayi1 = r.nextInt(5);
 
         while (true) {
-            String tahmin = JOptionPane.showInputDialog("Tahmin gir");
+            String tahmin = JOptionPane.showInputDialog("sayıyı tahmin et!!");
             int t = Integer.parseInt(tahmin);
             if (t == sayi1) {
-                String mesaj = "tahmin doğru - " + i + ".tahminde bildiniz";
+                String mesaj = "tahmin doğru - " + i + ". tahminde bildiniz";
                 JOptionPane.showMessageDialog(null, mesaj);
                 break;
             } else {

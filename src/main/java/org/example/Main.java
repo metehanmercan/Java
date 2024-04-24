@@ -14,10 +14,5 @@ public class Main {
         String d = String.valueOf(c);
         System.out.println(d);
 
-        // üs alma
-        System.out.println((int) (Math.pow(2, 2)));
-
-
-
     }
 }
