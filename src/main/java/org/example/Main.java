@@ -1,18 +1,14 @@
 package org.example;
 
 
+import org.example.thread.Counter;
+
 public class Main {
     public static void main(String[] args) {
+        Counter c1=new Counter("counter-1");
+        Counter c2=new Counter("counter-2");
 
-        // string veri tipini int'e çevirme
-        String a = "5";
-        int b = Integer.valueOf(a);
-        System.out.println(b * b);
-
-        // int  veri tipini stringe çevirme
-        int c = 9;
-        String d = String.valueOf(c);
-        System.out.println(d);
-
+        c1.start();
+        c2.start();
     }
 }
