@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Faktoriyel {
     public static int faktoriyel(int a) {
-        int sonuc=1;
+        int sonuc = 1;
         for (int i = 1; i <= a; i++) {
-             sonuc*=i;
+            sonuc *= i;
         }
         return sonuc;
     }
@@ -15,8 +15,7 @@ public class Faktoriyel {
         Scanner input = new Scanner(System.in);
         System.out.println("Sayı giriniz : ");
         int sayi = input.nextInt();
-
-        System.out.println("sonuc : " +  faktoriyel(sayi));
+        System.out.println("sonuc : " + faktoriyel(sayi));
 
     }
 

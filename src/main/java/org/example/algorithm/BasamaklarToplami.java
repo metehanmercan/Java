@@ -14,6 +14,6 @@ public class BasamaklarToplami {
          toplam+=sayi%10;
          sayi/=10;
         }
-        System.out.println(toplam);
+        System.out.println("basamaklar toplamı : " + toplam);
     }
 }

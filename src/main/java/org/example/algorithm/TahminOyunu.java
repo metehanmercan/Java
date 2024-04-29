@@ -7,7 +7,7 @@ public class TahminOyunu {
     public static void main(String[] args) {
         Random random=new Random();
         int n= random.nextInt(20);
-       // System.out.println(n);
+
 
         int hak=5;
         Scanner input=new Scanner(System.in);
