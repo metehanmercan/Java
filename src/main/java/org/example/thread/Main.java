@@ -3,7 +3,7 @@ package org.example.thread;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        Counter2 c1 = new Counter2("c1", 1);
+      Counter2 c1 = new Counter2("c1", 1);
         Counter2 c2 = new Counter2("c2", 2);
         Counter2 c3 = new Counter2("c3", 3);
 
@@ -17,6 +17,8 @@ public class Main {
         c1.stop();
         t2.start();
         t3.start();
+
+
 
     }
 }
