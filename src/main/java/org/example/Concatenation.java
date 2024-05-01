@@ -2,7 +2,7 @@ package org.example;
 
 public class Concatenation {
     public static void main(String[] args) {
-        //Ornek 1: Bir String ve iki int variable olusturun. String degeri ile Integer’larin toplamini console’a yazdirin.
+        // örnek 1: Bir String ve iki int variable olusturun. String degeri ile Integer’larin toplamini console’a yazdirin.
 //Example 1: Create a String and two int variables. Print the string value and the sum of the Integers to the console.
 
 //Java da “+” sembolu iki sayi arasinda kullanilirsa “toplama islemi” olur
