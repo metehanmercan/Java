@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Array {
+public class Dizi {
     public static void main(String[] args) {
         // array kopyalama
         int[] dizi1 = {1, 3, 5, 7, 9};

@@ -1,4 +1,4 @@
-package org.example.collections.set;
+package org.example.collections.set.treeSet;
 
 import java.util.TreeSet;
 
@@ -8,7 +8,7 @@ public class TreeSet3 {
         // tekrar edenler tek görünür yani bir veri tek sefer tutulur
         // sıralama yapar
 
-        TreeSet<Student3> students=new TreeSet<>(new OrderNoteComparator3()); // notu azdan çoğa doğru sıraladık
+        TreeSet<Student3> students=new TreeSet<>(new OrderNameComparator3()); // notu azdan çoğa doğru sıraladık
 
         students.add(new Student3("mete",20));
         students.add(new Student3("ekici",10));

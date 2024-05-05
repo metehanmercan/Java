@@ -1,4 +1,4 @@
-package org.example.collections.set;
+package org.example.collections.set.treeSet;
 
 public class Student3 {
     private  String name;
