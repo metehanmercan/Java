@@ -11,5 +11,6 @@ public class Operators {
         double a=2.0;
         int b =20;
         System.out.println(b/a);
+        System.out.println("---" );
     }
 }

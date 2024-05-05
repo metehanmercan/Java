@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class Dizi {
@@ -42,6 +43,12 @@ public class Dizi {
         lists=Arrays.asList(ciyts);
         System.out.println(lists); // cıktısı bu -> [adana, ankara, mersin]
 
+        System.out.println("-------");
 
+        int[] x={1,2,3,4,5,6};
+        Iterator<Integer> itr= Arrays.stream(x).iterator();  // iteratör ile dizi gezme
+        while (itr.hasNext()){
+            System.out.println(itr.next());
+        }
     }
 }
