@@ -12,5 +12,7 @@ public class Operators {
         int b =20;
         System.out.println(b/a);
         System.out.println("---" );
+        System.out.println("---" );
+
     }
 }
