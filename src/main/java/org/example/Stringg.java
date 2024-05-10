@@ -27,7 +27,6 @@ public class Stringg {
         // üçüncü parametre ise parametre olarak verilen string ifadenin kaçıncı indisi ile başlicak,
         // dördüncü parametre ise karşılaştırmanın kaç karakter devam edeceğidir
 
-
         if (b==true){
             System.out.println("aranan bölgede ---" +d2+ "--- bulundu");
         }else {
@@ -57,6 +56,17 @@ public class Stringg {
         // toUpperCase ve tuLowerCase ile hepsini büyük ve küçük yapma
         System.out.println(m1.toLowerCase());
         System.out.println(m1.toUpperCase());
+
+
+        // kelime atama
+        String c1="Learn  1 Java earn  123 money";
+        String c2=c1.replace("money","dollar"); // Learn Java earn dollar
+        System.out.println(c2);
+        String c3=c1.replace("e","");
+        System.out.println(c3);
+        String c4=c1.replaceAll("[0-9]","*");  // tüm rakamları yıldıza cevirir
+        System.out.println(c4);
+
 
     }
 }
