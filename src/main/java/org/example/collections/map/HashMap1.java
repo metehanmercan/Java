@@ -8,6 +8,7 @@ public class HashMap1 {
     public static void main(String[] args) {
         Map<String,Integer> number=new HashMap<>();
 
+        // cıktı sıralı değildir
         // mape ekleme put ile yapılır
         number.put("one",1);
         number.put("two",2);

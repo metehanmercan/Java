@@ -45,7 +45,7 @@ public class Dizi {
 
         System.out.println("-------");
 
-        int[] x={1,2,3,4,5,6};
+        int[] x={1,2,3,4,5,6,7};
         Iterator<Integer> itr= Arrays.stream(x).iterator();  // iteratör ile dizi gezme
         while (itr.hasNext()){
             System.out.println(itr.next());
