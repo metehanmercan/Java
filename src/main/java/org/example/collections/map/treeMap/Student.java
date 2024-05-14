@@ -27,4 +27,12 @@ public class Student {
 
     public Student() {
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "no=" + no +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
