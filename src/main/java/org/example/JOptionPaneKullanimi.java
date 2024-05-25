@@ -1,6 +1,7 @@
 package org.example;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 public class JOptionPaneKullanimi {
@@ -22,28 +23,41 @@ public class JOptionPaneKullanimi {
         int sayi1 = r.nextInt(20);
 
         while (hak > 0) {
-            String tahmin = JOptionPane.showInputDialog("1-20 arasında sayı tahmin et ");
-            int t = Integer.parseInt(tahmin);
-            hak--;
-            if (t == sayi1) {
-                String mesaj = "tahmin doğru - " + i + ". tahminde bildiniz";
+            String iconPath = "/png.png"; // resources klasöründeki icon.png dosyasına erişmek için kök dizinden başlayarak yolu belirtin.
 
-                JOptionPane.showMessageDialog(null, mesaj);
-                break;
-            } else if (t < sayi1) {
-                String mesaj1 = "tahmini yükselt - " + hak + "hakkın kaldı";
-                JOptionPane.showMessageDialog(null, mesaj1);
-            } else {
-                String mesaj2 = "tahmini düşür - " + hak + "hakkın kaldı";
-                JOptionPane.showMessageDialog(null, mesaj2);
+            // Kaynak dosyasına erişim
+            java.net.URL imgURL = Main.class.getResource(iconPath);
+            if (imgURL != null) {
+                // ImageIcon oluşturma ve yeniden boyutlandırma
+                ImageIcon originalIcon = new ImageIcon(imgURL);
+                Image originalImage = originalIcon.getImage();
+                Image resizedImage = originalImage.getScaledInstance(64, 64, Image.SCALE_SMOOTH); // 64x64 boyutunda ölçeklendir
+                ImageIcon resizedIcon = new ImageIcon(resizedImage);
 
-            }
-            i++;
-            ;
-            if (hak == 0) {
-                String mesaj3 = "kaybettin";
-                JOptionPane.showMessageDialog(null, mesaj3);
+                UIManager.put("OptionPane.okButtonText", "tamam"); // ok kısmı yerine türkçe tamam görülecek
+                UIManager.put("OptionPane.cancelButtonText", "iptal");
+
+                String tahmin = JOptionPane.showInputDialog(null, "1-20 arasında sayı tahmin et ", "tahmin oyunu", JOptionPane.INFORMATION_MESSAGE, resizedIcon, null, null).toString();
+                int t = Integer.parseInt(tahmin);
+                hak--;
+                if (t == sayi1) {
+                    String mesaj = "tahmin doğru - " + i + ". tahminde bildiniz";
+
+                    JOptionPane.showMessageDialog(null, mesaj, "VICTORY!!!", JOptionPane.OK_OPTION);
+                    break;
+                } else if (t < sayi1) {
+                    String mesaj1 = "tahmini yükselt - " + hak + "hakkın kaldı";
+                    JOptionPane.showMessageDialog(null, mesaj1, "BİL BAKALIM!!!", JOptionPane.OK_OPTION);
+                } else {
+                    String mesaj2 = "tahmini düşür - " + hak + "hakkın kaldı";
+                    JOptionPane.showMessageDialog(null, mesaj2, "BİL BAKALIM!!!", JOptionPane.OK_OPTION);
+
+                }
+                i++;
+                if (hak == 0) {
+                    String mesaj3 = "kaybettin";
+                    JOptionPane.showMessageDialog(null, mesaj3, "Pes etme", JOptionPane.OK_OPTION);
+                }
             }
         }
-    }
-}
+    }}

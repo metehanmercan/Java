@@ -34,5 +34,6 @@ public class Student {
                 "no=" + no +
                 ", name='" + name + '\'' +
                 '}';
+
     }
 }
